@@ -26,6 +26,11 @@ export const routes = [
         component: () => import('@/views/pokedex/index.vue'),
         meta: {title: '宝可梦'}
     },
+    {
+        path: '/theme',
+        component: () => import('@/views/theme/index.vue'),
+        meta: {title: '主题色'}
+    }
 ]
 
 export const router = createRouter({
