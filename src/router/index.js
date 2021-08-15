@@ -30,6 +30,11 @@ export const routes = [
         path: '/theme',
         component: () => import('@/views/theme/index.vue'),
         meta: {title: '主题色'}
+    },
+    {
+        path: '/js',
+        component: () => import('@/views/js/index.vue'),
+        meta: {title: 'JS进阶'}
     }
 ]
 
