@@ -35,6 +35,11 @@ export const routes = [
         path: '/js',
         component: () => import('@/views/js/index.vue'),
         meta: {title: 'JS进阶'}
+    },
+    {
+        path: '/setup',
+        component: () => import('@/views/setup/index.vue'),
+        meta: {title: 'Vue3 setup'}
     }
 ]
 
