@@ -40,6 +40,11 @@ export const routes = [
         path: '/setup',
         component: () => import('@/views/setup/index.vue'),
         meta: {title: 'Vue3 setup'}
+    },
+    {
+        path: '/zhongguose',
+        component: () => import('@/views/zhongguose/index.vue'),
+        meta: {title: '中国色'}
     }
 ]
 
