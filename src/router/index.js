@@ -45,6 +45,11 @@ export const routes = [
         path: '/zhongguose',
         component: () => import('@/views/zhongguose/index.vue'),
         meta: {title: '中国色'}
+    },
+    {
+        path: '/icss',
+        component: () => import('@/views/icss/index.vue'),
+        meta: {title: '有趣的css'}
     }
 ]
 
