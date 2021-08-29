@@ -1,4 +1,4 @@
-[
+export const zhongguose = [
     {
         "name": "暗玉紫",
         "pinyin": "anyuzi",
