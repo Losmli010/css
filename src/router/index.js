@@ -50,6 +50,11 @@ export const routes = [
         path: '/icss',
         component: () => import('@/views/icss/index.vue'),
         meta: {title: '有趣的css'}
+    },
+    {
+        path: '/sentry',
+        component: () => import('@/views/sentry/index.vue'),
+        meta: {title: 'sentry监控'}
     }
 ]
 
