@@ -3,6 +3,8 @@
         <border-demo />
         <column-height />
         <linear-gradient />
+        <button-effect />
+        <nav-follower />
     </div>
 </template>
 
@@ -10,4 +12,6 @@
 import BorderDemo from './components/Border.vue'
 import ColumnHeight from './components/ColumnHeight.vue'
 import LinearGradient from './components/LinearGradient.vue'
+import ButtonEffect from './components/ButtonEffect.vue'
+import NavFollower from './components/NavFollower.vue'
 </script>
