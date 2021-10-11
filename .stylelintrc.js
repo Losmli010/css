@@ -1,6 +1,12 @@
 module.exports = {
   extends: [
-    "stylelint-config-standard"
+    'stylelint-config-standard',
+    'stylelint-config-rational-order',
+    'stylelint-config-prettier'
+  ],
+  plugins: [
+    'stylelint-scss',
+    'stylelint-declaration-block-no-ignored-properties'
   ],
   rules: {
 //    "comment-empty-line-before": null,

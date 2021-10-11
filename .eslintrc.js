@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
-    'airbnb',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     'prettier'
   ],
@@ -9,9 +10,27 @@ module.exports = {
     node: true,
     es6: true,
   },
-  parser: "vue-eslint-parser",
-  plugins: ['vue', '@typescript-eslint'],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true,
+    },
+  },
+  plugins: ['vue', '@typescript-eslint', 'import', 'prettier'],
   rules: {
-    'comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+
+    // prettier
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,   // 单引号替换双引号
+        semi: false,    // 去掉分号结尾
+        printWidth: 80,  // 换行
+      }
+    ]
   },
 }
