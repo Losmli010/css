@@ -21,16 +21,9 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint', 'import', 'prettier'],
   rules: {
-    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,   // 单引号替换双引号
-        semi: false,    // 去掉分号结尾
-        printWidth: 80,  // 换行
-      }
-    ]
+    'prettier/prettier': 'error',
   },
 }

@@ -5,10 +5,10 @@
 <script>
 export default {
   mounted() {
-    const el = document.querySelector('#app').classList;
-    el.add('default');
+    const el = document.querySelector('#app').classList
+    el.add('default')
   },
-};
+}
 </script>
 
 <style lang="scss">
