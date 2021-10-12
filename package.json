@@ -7,7 +7,7 @@
     "serve": "vite preview",
     "lint": "npm run tsc && npm run lint:script && npm run lint:style",
     "lint:script": "eslint --ext .ts,.vue src/",
-    "lint:style": "stylelint **/*.{html,vue,css,scss}",
+    "lint:style": "stylelint src/**/*.{html,vue,css,scss}",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {

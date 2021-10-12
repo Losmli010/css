@@ -9,6 +9,7 @@ module.exports = {
     'stylelint-declaration-block-no-ignored-properties'
   ],
   rules: {
+    'at-rule-no-unknown': null,
 //    "comment-empty-line-before": null,
 //    "function-name-case": ["lower", { "ignoreFunctions": ["/colorPalette/"] }],
 //    "no-invalid-double-slash-comments": null,
