@@ -1,11 +1,11 @@
 <template>
-    <div class="css-demo">
-        <border-demo />
-        <column-height />
-        <linear-gradient />
-        <button-effect />
-        <nav-follower />
-    </div>
+  <div class="css-demo">
+    <border-demo />
+    <column-height />
+    <linear-gradient />
+    <button-effect />
+    <nav-follower />
+  </div>
 </template>
 
 <script setup>
