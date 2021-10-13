@@ -23,7 +23,7 @@ export default {
   @include dark-theme();
 }
 #app {
-  background: var(--module-bg);
   color: var(--text-color);
+  background: var(--module-bg);
 }
 </style>
