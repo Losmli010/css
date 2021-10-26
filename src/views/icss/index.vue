@@ -5,6 +5,7 @@
     <linear-gradient />
     <button-effect />
     <nav-follower />
+    <scroll-progress />
   </div>
 </template>
 
@@ -14,4 +15,5 @@ import ColumnHeight from './components/ColumnHeight.vue'
 import LinearGradient from './components/LinearGradient.vue'
 import ButtonEffect from './components/ButtonEffect.vue'
 import NavFollower from './components/NavFollower.vue'
+import ScrollProgress from './components/ScrollProgress.vue'
 </script>
