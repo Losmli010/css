@@ -17,7 +17,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import { zhongguose } from './zhongguose.js'
+import { zhongguose } from './zhongguose'
 
 export default defineComponent({
   setup() {
