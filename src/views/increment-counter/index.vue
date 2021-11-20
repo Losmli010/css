@@ -1,17 +1,19 @@
 <template>
-  <div class="counter-container">
-    <div class="counter" data-target="12000"></div>
-    <span>Twitter Followers</span>
-  </div>
+  <div>
+    <div class="counter-container">
+      <div class="counter" data-target="12000"></div>
+      <span>Twitter Followers</span>
+    </div>
 
-  <div class="counter-container">
-    <div class="counter" data-target="5000"></div>
-    <span>YouTube Subscribers</span>
-  </div>
+    <div class="counter-container">
+      <div class="counter" data-target="5000"></div>
+      <span>YouTube Subscribers</span>
+    </div>
 
-  <div class="counter-container">
-    <div class="counter" data-target="7500"></div>
-    <span>Facebook Fans</span>
+    <div class="counter-container">
+      <div class="counter" data-target="7500"></div>
+      <span>Facebook Fans</span>
+    </div>
   </div>
 </template>
 
