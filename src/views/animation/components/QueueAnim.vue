@@ -89,10 +89,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.text span {
-  display: inline-block;
-  white-space: pre-wrap;
-}
-</style>
