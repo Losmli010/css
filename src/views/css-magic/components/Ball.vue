@@ -12,28 +12,28 @@
 
     <div class="path">
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
       <div class="avatar">
-        <img src="./qixi.jpeg" alt="" />
+        <img src="http://lea.verou.me/book/adamcatlace.jpg" />
       </div>
     </div>
   </div>
@@ -94,77 +94,73 @@ export default defineComponent({})
   }
 }
 
-.path {
-  position: relative;
-  margin: 100px;
-  width: 300px;
-  height: 300px;
-  background: orange;
-  border-radius: 50%;
-}
-.avatar {
-  position: absolute;
-  margin-left: 100px;
-  transform-origin: 100% 200px;
-  animation: spin 8s infinite linear;
+/**
+ * Animation along a circular path - Solution 1
+ */
 
-  & > img {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    animation: spin-reverse 8s infinite linear;
-  }
-}
-.avatar:first-child {
-  top: 190px;
-  left: 40px;
-  animation-delay: -8s;
-}
-.avatar:nth-child(2) {
-  top: 230px;
-  left: 80px;
-  animation-delay: -7s;
-}
-.avatar:nth-child(3) {
-  top: 230px;
-  left: 190px;
-  animation-delay: -6s;
-}
-.avatar:nth-child(4) {
-  top: 190px;
-  left: 230px;
-  animation-delay: -5s;
-}
-.avatar:nth-child(5) {
-  top: 80px;
-  left: 230px;
-  animation-delay: -4s;
-}
-.avatar:nth-child(6) {
-  top: 40px;
-  left: 190px;
-  animation-delay: -3s;
-}
-.avatar:nth-child(7) {
-  top: 40px;
-  left: 80px;
-  animation-delay: -2s;
-}
-.avatar:nth-child(8) {
-  top: 80px;
-  left: 40px;
-  animation-delay: -1s;
-}
 @keyframes spin {
   to {
     transform: rotate(1turn);
   }
 }
-@keyframes spin-reverse {
-  from {
-    transform: rotate(1turn);
-  }
+
+.avatar {
+  position: absolute;
+  left: 125px;
+  animation: spin 10s infinite linear;
+  transform-origin: 50% 150px;
+}
+
+.avatar > img {
+  animation: inherit;
+  animation-direction: reverse;
+}
+
+/* Anything below this is just styling */
+
+.avatar {
+  width: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar > img {
+  display: block;
+  width: inherit;
+}
+
+.path {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 100px 0;
+  border-radius: 50%;
+  background: #fb3;
+}
+.avatar:first-child {
+  animation-delay: -10s;
+}
+.avatar:nth-child(2) {
+  animation-delay: -8.75s;
+}
+.avatar:nth-child(3) {
+  animation-delay: -7.5s;
+}
+.avatar:nth-child(4) {
+  animation-delay: -6.25s;
+}
+.avatar:nth-child(5) {
+  animation-delay: -5s;
+}
+.avatar:nth-child(6) {
+  animation-delay: -3.75s;
+}
+.avatar:nth-child(7) {
+  animation-delay: -2.5s;
+}
+.avatar:nth-child(8) {
+  animation-delay: -1.25s;
 }
 </style>
