@@ -59,7 +59,7 @@ export default defineComponent({})
     height: 50px;
     background: radial-gradient(closest-side at 35% 35%, transparent, #e52069);
     border-radius: 50%;
-    animation: bounce 3s cubic-bezier(0.1, 0.25, 1, 1.25) infinite;
+    animation: bounce 3s cubic-bezier(0.1, 0.25, 1, 0.25) forwards;
   }
 }
 @keyframes bounce {
