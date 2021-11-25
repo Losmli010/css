@@ -1,57 +1,123 @@
 <template>
-  <div class="wrapper">
-    <div class="item">1111</div>
-    <div class="item">222</div>
-    <div class="item">333</div>
-    <div class="item">444</div>
+  <div ref="circleNode" class="path">
+    <div
+      v-for="index in 16"
+      :key="index"
+      class="avatar"
+      @mouseenter="stop"
+      @mouseleave="go"
+    >
+      <span class="item">{{ index }}</span>
+    </div>
   </div>
 </template>
 
 <script>
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 
 export default defineComponent({
   setup() {
+    const circleNode = ref(null)
+    const state = ref(false)
+
     onMounted(() => {
-      const nodeList = document.getElementsByClassName('item')
-      Array.from(nodeList).forEach((item, index) => {
-        setTimeout(() => {
-          item.style.transition = 'transform 0s linear'
-          let offset = 70 - (index + 1) * 10 + 'px'
-          item.style.transform = `translate(-88px, ${offset})`
-          console.log(item.clientWidth)
-        }, 200)
-      })
+      run()
     })
+
+    const running = (node) => {
+      return new Promise((resolve) => {
+        if (state.value) return
+        node.style.animationPlayState = 'running'
+        setTimeout(() => {
+          resolve(paused(node))
+        }, 625)
+      })
+    }
+
+    const paused = (node) => {
+      return new Promise((resolve) => {
+        if (state.value) return
+        node.style.animationPlayState = 'paused'
+        setTimeout(() => {
+          resolve(running(node))
+        }, 5000)
+      })
+    }
+
+    const run = () => {
+      Array.from(circleNode.value.children).forEach((item) => {
+        running(item)
+      })
+    }
+
+    const stop = () => {
+      state.value = true
+    }
+
+    const go = () => {
+      state.value = false
+      Array.from(circleNode.value.children).forEach((item) => {
+        running(item)
+      })
+    }
+
+    return { circleNode, stop, go }
   },
 })
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  display: flex;
-  //flex-direction: column;
+/**
+ * Animation along a circular path - Solution 1
+ */
 
-  .item {
-    //flex: 0 0 25%;
-    width: 288px;
-    height: 288px;
-    background: yellow;
-    margin-right: 16px;
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
   }
+}
 
-  .item:first-child {
-    transform: translateY(50px);
-  }
+.avatar {
+  position: absolute;
+  left: 125px;
+  animation: spin 10s infinite linear;
+  animation-play-state: paused;
+  transform-origin: 50% 150px;
+}
 
-  .item:nth-child(2) {
-    transform: translateY(70px);
-  }
-  .item:nth-child(3) {
-    transform: translateY(60px);
-  }
-  .item:nth-child(4) {
-    transform: translateY(40px);
+.avatar > span {
+  animation: inherit;
+  animation-direction: reverse;
+}
+
+/* Anything below this is just styling */
+
+.avatar {
+  width: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar > span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+
+.path {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 100px 0;
+  border-radius: 50%;
+  background: #fb3;
+}
+@for $i from 1 through 16 {
+  .avatar:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.625 - 10}s;
   }
 }
 </style>
