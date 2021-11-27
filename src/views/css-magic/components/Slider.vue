@@ -12,15 +12,15 @@
           >
             <div class="item">
               <img src="./qixi.jpeg" alt="" />
-              <span>{{ index }}</span>
+              <!-- span>{{ index }}</span -->
             </div>
           </div>
         </div>
       </div>
-      <div>
+      <!-- div>
         <button @click="goForward">前进</button>
         <button @click="goBack">后退</button>
-      </div>
+      </div -->
     </div>
   </div>
 </template>
@@ -158,15 +158,15 @@ export default defineComponent({
 
   .wrapper {
     position: absolute;
-    top: -100px;
-    left: -100px;
+    top: -130px;
+    left: -130px;
     width: 260px;
     height: 260px;
     background: red;
 
     img {
-      width: 188px;
-      height: 188px;
+      width: 260px;
+      height: 260px;
       object-fit: cover;
     }
   }
