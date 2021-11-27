@@ -73,80 +73,10 @@ export default defineComponent({
       circleNode.value.style.transform = `rotate(${step.value * everyStep}deg)`
       Array.from(circleNode.value.children).map((item, index) => {
         item.style.transition = 'transform 0.4s ease-in-out'
-        switch (index) {
-          case 0:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(45 * pi)}px,
-    ${radius + radius * Math.sin(45 * pi)}px
+        item.style.transform = `translate(
+    ${radius + radius * Math.cos((45 + everyStep * (index + 1)) * pi)}px,
+    ${radius + radius * Math.sin((45 + everyStep * (index + 1)) * pi)}px
   ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 1:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(75 * pi)}px,
-    ${radius + radius * Math.sin(75 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 2:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(75 * pi)}px,
-    ${radius + radius * Math.sin(75 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 3:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(45 * pi)}px,
-    ${radius + radius * Math.sin(45 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 4:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(15 * pi)}px,
-    ${radius + radius * Math.sin(15 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 5:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(15 * pi)}px,
-    ${radius - radius * Math.sin(15 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 6:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(45 * pi)}px,
-    ${radius - radius * Math.sin(45 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 7:
-            item.style.transform = `translate(
-    ${radius + radius * Math.cos(75 * pi)}px,
-    ${radius - radius * Math.sin(75 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 8:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(75 * pi)}px,
-    ${radius - radius * Math.sin(75 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 9:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(45 * pi)}px,
-    ${radius - radius * Math.sin(45 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 10:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(15 * pi)}px,
-    ${radius - radius * Math.sin(15 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-          case 11:
-            item.style.transform = `translate(
-    ${radius - radius * Math.cos(15 * pi)}px,
-    ${radius + radius * Math.sin(15 * pi)}px
-  ) rotate(${0 - step.value * everyStep}deg)`
-            break
-        }
       })
     }
 
@@ -222,8 +152,7 @@ export default defineComponent({
   position: relative;
   width: 1200px;
   height: 1200px;
-  //padding: 20px;
-  margin: 100px auto;
+  margin: 0 auto;
   border-radius: 50%;
   background: #fb3;
 
@@ -244,77 +173,13 @@ export default defineComponent({
 }
 
 $radius: 600px;
-.wrapper:first-child {
-  transform: translate(
-    $radius - $radius * cos(45deg),
-    $radius + $radius * sin(45deg)
-  );
-}
-.wrapper:nth-child(2) {
-  transform: translate(
-    $radius - $radius * cos(75deg),
-    $radius + $radius * sin(75deg)
-  );
-}
-.wrapper:nth-child(3) {
-  transform: translate(
-    $radius + $radius * cos(75deg),
-    $radius + $radius * sin(75deg)
-  );
-}
-.wrapper:nth-child(4) {
-  transform: translate(
-    $radius + $radius * cos(45deg),
-    $radius + $radius * sin(45deg)
-  );
-}
-.wrapper:nth-child(5) {
-  transform: translate(
-    $radius + $radius * cos(15deg),
-    $radius + $radius * sin(15deg)
-  );
-}
-.wrapper:nth-child(6) {
-  transform: translate(
-    $radius + $radius * cos(15deg),
-    $radius - $radius * sin(15deg)
-  );
-}
-.wrapper:nth-child(7) {
-  transform: translate(
-    $radius + $radius * cos(45deg),
-    $radius - $radius * sin(45deg)
-  );
-}
-.wrapper:nth-child(8) {
-  transform: translate(
-    $radius + $radius * cos(75deg),
-    $radius - $radius * sin(75deg)
-  );
-}
-.wrapper:nth-child(9) {
-  transform: translate(
-    $radius - $radius * cos(75deg),
-    $radius - $radius * sin(75deg)
-  );
-}
-.wrapper:nth-child(10) {
-  transform: translate(
-    $radius - $radius * cos(45deg),
-    $radius - $radius * sin(45deg)
-  );
-}
-.wrapper:nth-child(11) {
-  transform: translate(
-    $radius - $radius * cos(15deg),
-    $radius - $radius * sin(15deg)
-  );
-}
-.wrapper:nth-child(12) {
-  transform: translate(
-    $radius - $radius * cos(15deg),
-    $radius + $radius * sin(15deg)
-  );
+@for $i from 1 through 12 {
+  .wrapper:nth-child(#{$i}) {
+    transform: translate(
+      $radius + $radius * cos(45deg + $i * 30deg),
+      $radius + $radius * sin(45deg + $i * 30deg)
+    );
+  }
 }
 
 .container-wrapper {
@@ -324,7 +189,7 @@ $radius: 600px;
   overflow: hidden;
   .container {
     position: absolute;
-    top: -950px;
+    top: -850px;
     left: 50%;
     transform: translateX(-50%);
   }
