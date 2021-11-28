@@ -69,6 +69,7 @@ export default defineComponent({
     const pi = Math.PI / 180
     const everyStep = 30
     const runStep = () => {
+      if (!circleNode.value) return
       circleNode.value.style.transition = 'transform 0.4s ease-in-out'
       circleNode.value.style.transform = `rotate(${step.value * everyStep}deg)`
       Array.from(circleNode.value.children).map((item, index) => {
