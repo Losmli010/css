@@ -11,9 +11,9 @@
 
 <style lang="scss" scoped>
 .box {
+  position: relative;
   width: 200px;
   height: 200px;
-  position: relative;
   perspective: 500;
 
   img {

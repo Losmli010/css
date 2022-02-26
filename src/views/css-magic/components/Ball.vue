@@ -107,8 +107,8 @@ export default defineComponent({})
 .avatar {
   position: absolute;
   left: 125px;
-  animation: spin 10s infinite linear;
   transform-origin: 50% 150px;
+  animation: spin 10s infinite linear;
 }
 
 .avatar > img {
@@ -121,8 +121,8 @@ export default defineComponent({})
 .avatar {
   width: 50px;
   margin: 0 auto;
-  border-radius: 50%;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .avatar > img {
@@ -134,10 +134,10 @@ export default defineComponent({})
   position: relative;
   width: 300px;
   height: 300px;
-  padding: 20px;
   margin: 100px 0;
-  border-radius: 50%;
+  padding: 20px;
   background: #fb3;
+  border-radius: 50%;
 }
 .avatar:first-child {
   animation-delay: -10s;

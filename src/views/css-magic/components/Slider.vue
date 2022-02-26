@@ -154,8 +154,8 @@ export default defineComponent({
   width: 1200px;
   height: 1200px;
   margin: 0 auto;
-  border-radius: 50%;
   background: #fb3;
+  border-radius: 50%;
 
   .wrapper {
     position: absolute;

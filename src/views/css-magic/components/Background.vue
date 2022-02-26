@@ -13,9 +13,9 @@
 .transparent-border {
   width: 83px;
   padding: 20px;
-  border: 10px solid hsla(0, 0%, 100%, 0.5);
   background: white;
   background-clip: padding-box;
+  border: 10px solid hsla(0, 0%, 100%, 0.5);
 }
 
 .stripes {

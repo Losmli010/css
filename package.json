@@ -6,12 +6,13 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "npm run tsc && npm run lint:script && npm run lint:style",
-    "lint:script": "eslint --ext .ts,.vue src/",
-    "lint:style": "stylelint src/**/*.{html,vue,css,scss}",
+    "lint:script": "eslint --ext .ts,.vue src/ --fix",
+    "lint:style": "stylelint src/**/*.{html,vue,css,scss} --fix",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "raven-js": "^3.27.2",
+    "three": "^0.138.0",
     "vue": "^3.2.20",
     "vue-router": "^4.0.10"
   },

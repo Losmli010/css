@@ -57,6 +57,21 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/views/sentry/index.vue'),
     meta: { title: 'sentry监控' },
   },
+  {
+    path: '/animation',
+    component: () => import('@/views/animation/index.vue'),
+    meta: { title: '动效' },
+  },
+  {
+    path: '/css-magic',
+    component: () => import('@/views/css-magic/index.vue'),
+    meta: { title: 'CSS Magic' },
+  },
+  {
+    path: '/yi',
+    component: () => import('@/views/yi/index.vue'),
+    meta: { title: '画八卦' },
+  },
 ]
 
 export const router = createRouter({

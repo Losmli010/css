@@ -20,18 +20,18 @@
 .ellipse {
   width: 100px;
   height: 50px;
-  border-radius: 50% / 50%;
   background: #fb3;
+  border-radius: 50% / 50%;
 }
 
 .parallelogram {
   width: 200px;
-  padding: 0.5em 1em;
   margin: 0.5em;
-  background: #58a;
+  padding: 0.5em 1em;
   color: white;
-  transform: skewX(45deg);
   text-align: center;
+  background: #58a;
+  transform: skewX(45deg);
 
   & > span {
     display: inline-block;
@@ -43,8 +43,8 @@
   width: 200px;
   height: 200px;
   margin: 100px;
-  transform: rotate(45deg);
   overflow: hidden;
+  transform: rotate(45deg);
 
   & > img {
     max-width: 100%;
@@ -55,8 +55,8 @@
 .diamond1 img {
   max-width: 250px;
   margin: 20px;
+  transition: 1s;
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  transition: 1s;
 }
 </style>

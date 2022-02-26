@@ -27,17 +27,17 @@
 }
 
 .shadow-two-side {
-  margin-top: 100px;
   width: 1.6in;
   height: 1in;
+  margin-top: 100px;
   background: #fb3;
   box-shadow: -5px 0 5px -3px black, 5px 0 5px -3px black;
 }
 
 .shadow-filter {
-  margin-top: 100px;
   width: 1.6in;
   height: 1in;
+  margin-top: 100px;
   background: #fb3;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
     drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.5));
@@ -48,9 +48,9 @@
   justify-content: space-between;
 
   div {
-    margin-top: 100px;
     width: 1.6in;
     height: 1in;
+    margin-top: 100px;
     background: #fb3;
   }
 
@@ -71,9 +71,9 @@
 .image-slider {
   position: relative;
   display: inline-block;
-  margin-top: 100px;
   width: 200px;
   height: 200px;
+  margin-top: 100px;
 
   & > div {
     position: absolute;
