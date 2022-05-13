@@ -72,6 +72,11 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/views/yi/index.vue'),
     meta: { title: '画八卦' },
   },
+  {
+    path: '/css-specificity',
+    component: () => import('@/views/css-specificity/index.vue'),
+    meta: { title: 'CSS规则应用优先级' },
+  },
 ]
 
 export const router = createRouter({

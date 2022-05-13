@@ -46,6 +46,7 @@ export default defineComponent({})
 </script>
 
 <style lang="scss" scoped>
+/* stylelint-disable no-duplicate-selectors */
 .divider {
   height: 20px;
 }

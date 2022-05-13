@@ -19,6 +19,7 @@
 </template>
 
 <style lang="scss" scoped>
+/* stylelint-disable no-descending-specificity */
 .shadow-one-side {
   width: 1.6in;
   height: 1in;

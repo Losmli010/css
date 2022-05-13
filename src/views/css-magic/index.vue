@@ -6,6 +6,7 @@
     <ball />
     <flip />
     <slider />
+    <frame-animation />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Shadow from './components/Shadow.vue'
 import Ball from './components/Ball.vue'
 import Flip from './components/Flip.vue'
 import Slider from './components/Slider.vue'
+import FrameAnimation from './components/FrameAnimation.vue'
 
 export default defineComponent({
   components: {
@@ -26,6 +28,7 @@ export default defineComponent({
     Ball,
     Flip,
     Slider,
+    FrameAnimation,
   },
 })
 </script>
