@@ -5,6 +5,7 @@
     <objects />
     <event-loop />
     <promise />
+    <generator />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Function from './components/Function.vue'
 import Objects from './components/Object.vue'
 import EventLoop from './components/EventLoop.vue'
 import Promise from './components/Promise.vue'
+import Generator from './components/Generator.vue'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     Objects,
     EventLoop,
     Promise,
+    Generator,
   },
 }
 </script>
